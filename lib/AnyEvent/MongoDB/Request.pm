@@ -117,7 +117,7 @@ sub op_update {
 sub op_insert {
   my ($self, $opt) = @_;
 
-  my ($insert, $ids) = MongoDB::write_insert($opt->{ns}, $opt->{documents});
+  my ($insert, $ids) = MongoDB::write_insert($opt->{ns}, $opt->{documents}, 1);
 
   $self->new({ %$opt, message => \$insert, ids => $ids });
 }
