@@ -79,7 +79,7 @@ sub op_query {
     $opt->{skip} || 0,
     $page,
     $opt->{query}  || {},
-    $opt->{fields} || {}
+    $opt->{fields}
   );
 
   # TODO: $opt->{all} - fetch all documents before calling cb, just once
