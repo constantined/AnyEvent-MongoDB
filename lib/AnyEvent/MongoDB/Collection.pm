@@ -97,7 +97,7 @@ sub update {
 
   my %arg = (ns => $self->ns);
   $arg{query} = shift if ref($_[0]) and ref($_[0]) ne 'CODE';
-  $arg{doc}   = shift if ref($_[0]) and ref($_[0]) ne 'CODE';
+  $arg{update} = shift if ref($_[0]) and ref($_[0]) ne 'CODE';
   $arg{cb}    = shift if ref($_[0]);
 
   my %options = (@_, %arg);
